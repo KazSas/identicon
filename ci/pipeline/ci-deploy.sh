@@ -52,8 +52,11 @@ function aswCreateInstance () {
     fi
   else
     # $EC2_NAME という名前のインスタンスが存在していない場合
-    echo "念のため認証ファイルを再作成します。"
-    docker-machine regenerate-certs ${EC2_NAME} -f
+    if aws ec2 describe-key-pairs | jq -r '.KeyPairs[].KeyName' | grep -q $EC2_NAME; then
+      echo "キーペア($EC2_NAME)を削除します。"
+      aws ec2 delete-key-pair --key-name "$EC2_NAME"
+    fi
+    
     echo "AWS上にDockerEngine($EC2_NAME)を作成します。"
     docker-machine create \
     --driver amazonec2 \
