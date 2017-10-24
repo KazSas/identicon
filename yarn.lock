@@ -30,6 +30,10 @@ assert-plus@1.0.0, assert-plus@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/assert-plus/-/assert-plus-1.0.0.tgz#f12e0f3c5d77b0b1cdd9146942e4e96c1e4dd525"
 
+assertion-error@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/assertion-error/-/assertion-error-1.0.0.tgz#c7f85438fdd466bc7ca16ab90c81513797a5d23b"
+
 assertion-error@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/assertion-error/-/assertion-error-1.0.2.tgz#13ca515d86206da0bac66e834dd397d87581094c"
@@ -556,6 +560,12 @@ negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
 
+oath@latest:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/oath/-/oath-1.0.0.tgz#2f4e1f7797b903a78b243527dc68245b0aeb0d58"
+  dependencies:
+    simple-assert "~1.0.0"
+
 oauth-sign@~0.8.2:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/oauth-sign/-/oauth-sign-0.8.2.tgz#46a6ab7f0aead8deae9ec0565780b7d4efeb9d43"
@@ -675,6 +685,12 @@ safe-buffer@5.1.1, safe-buffer@^5.0.1, safe-buffer@^5.1.1, safe-buffer@~5.1.0, s
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.1.tgz#893312af69b2123def71f57889001671eeb2c853"
 
+sechash@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/sechash/-/sechash-0.2.1.tgz#8b71fe47d68272f47a35f1640e4cc921325b133b"
+  dependencies:
+    oath latest
+
 send@0.15.6:
   version "0.15.6"
   resolved "https://registry.yarnpkg.com/send/-/send-0.15.6.tgz#20f23a9c925b762ab82705fe2f9db252ace47e34"
@@ -715,6 +731,12 @@ serve-static@1.12.6:
 setprototypeof@1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/setprototypeof/-/setprototypeof-1.0.3.tgz#66567e37043eeb4f04d91bd658c0cbefb55b8e04"
+
+simple-assert@~1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/simple-assert/-/simple-assert-1.0.0.tgz#53f1790000d714424124290780bc2a3e511cf0ef"
+  dependencies:
+    assertion-error "1.0.0"
 
 sntp@2.x.x:
   version "2.0.2"
