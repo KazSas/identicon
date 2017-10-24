@@ -1,6 +1,6 @@
 node {
   stage('Preparation') {
-    git 'https://github.com/NeumaticVmax/identicon.git'
+    git 'https://github.com/KazSas/identicon.git'
   }
   stage('Docker Build') {
       sh 'ls -la'
