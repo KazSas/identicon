@@ -52,6 +52,8 @@ function aswCreateInstance () {
     fi
   else
     # $EC2_NAME という名前のインスタンスが存在していない場合
+    echo "念のため認証ファイルを再作成します。"
+    docker-machine regenerate-certs ${EC2_NAME} -f
     echo "AWS上にDockerEngine($EC2_NAME)を作成します。"
     docker-machine create \
     --driver amazonec2 \
